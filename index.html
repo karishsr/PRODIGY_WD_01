@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Construction Websie</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: grey;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    section {
+      padding: 20px;
+      text-align: center;
+
+    }
+
+
+    p1 {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    .button {
+  background-color: #04AA6D;
+  border: none;
+  color: blue;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+  .header {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+
+.content {
+  padding: 20px;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.container {
+  display: flex;
+}
+.left {
+  width: 50%;
+  padding: 20px;
+}
+.right {
+  width: 50%;
+  padding: 20px;
+  text-align: left;
+  background-color: #333;
+  color: white;
+  font-size: 20pt;
+}
+
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 20px;
+  height: 400px; 
+  text-align: center;
+  font-size: 15pt;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (min-width: 1000px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+
+  </style>
+</head>
+<body onload="ShowBanners()">
+  <header>
+    <h1>Newel Residential Remodeling</h1>
+    <p>Recreating Dream Homes That Last</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="projects.html">PROJECTS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <a href="contact.html">
+        <button style="background-color: white; padding: 15px 32px; font-size: 15px;">CALL NOW</button>
+      </a>
+      
+    </ul>
+   
+  </nav>
+ 
+    
+  <script language="Javascript">MyBanners=new Array('banner1.jpg','banner2.jpg','banner3.jpg')
+    banner=0
+    function ShowBanners()
+    { if (document.images)
+    { banner++
+    if (banner==MyBanners.length) {
+    banner=0}
+    document.ChangeBanner.src=MyBanners[banner]
+    setTimeout("ShowBanners()",2000)
+    }
+    }
+    </script>
+    
+    <center>
+    <img src="banner1.jpg" width="100%" height="510px" name="ChangeBanner"/>
+    </center>
+    <div class="header">
+      <h1>Our Services</h1>
+    </div>
+    
+    <div class="container">
+    <div class="left">
+      <img src="men.webp" alt="Construction workers" width="100%">
+    </div>
+    <div class="right">
+      <ul>
+        <li>Complete Remodeling</li>
+        <li>Kitchen Remodeling</li>
+        <li>Bathroom Remodeling</li>
+        <li>Home Interior</li>
+        <li>Flooring</li>
+      </ul>
+      <a href="services.html">
+        <button style="background-color: white; padding: 15px 32px; font-size: 20px;">More Info</button>
+      </a>
+    </div>
+    </div>
+    <div class="header">
+      <h1>About Us</h1>
+    </div>
+    <div class="row">
+      <div class="column" style="background-color:#aaa;">
+        <h2>Newel Residential Remodeling</h2>
+        <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” 
+          or double click me to add your own content and make changes to the font. 
+          I’m a great place for you to tell a story and let your users know a little more about you.</p>
+          <a href="about.html">
+            <button style="background-color: white; padding: 15px 32px; font-size: 20px;">More Info</button>
+          </a>
+      </div>
+      
+      <div class="column" style="background-color:#bbb;">
+        <img src="construct.jpeg" alt="Construction workers" width="100%" style="float:right">
+      </div>
+    </div>
+   
+ 
+</body>
+</html>
